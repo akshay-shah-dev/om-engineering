@@ -65,7 +65,7 @@ export default function AboutSection() {
                   Holding a PG Diploma in Business Development, Sachin R. Barot brings over <strong>20 years</strong> of vital experience executing major government infrastructure projects across Gujarat and beyond. 
                 </p>
                 <p className="mt-4 text-white/80 leading-relaxed italic">
-                  "Combining strong engineering knowledge with practical project execution and strategic development capabilities to solve diverse challenges."
+                  &quot;Combining strong engineering knowledge with practical project execution and strategic development capabilities to solve diverse challenges.&quot;
                 </p>
               </div>
             </div>

@@ -42,9 +42,9 @@ export default function ContactSection() {
       setSubmitStatus('success');
       setFormData({ name: '', email: '', phone: '', message: '' });
       setTimeout(() => setSubmitStatus('idle'), 5000);
-    } catch (error: any) {
+    } catch (error: unknown) {
       setSubmitStatus('error');
-      setErrorMessage(error.message || 'An unexpected error occurred.');
+      setErrorMessage(error instanceof Error ? error.message : 'An unexpected error occurred.');
     } finally {
       setIsSubmitting(false);
     }
@@ -64,7 +64,7 @@ export default function ContactSection() {
         <div className="flex flex-col lg:flex-row gap-16">
           <div className="lg:w-1/2 pt-8">
             <div className="inline-flex items-center gap-2 text-[#F37130] uppercase font-bold tracking-widest text-sm mb-4">
-              <span className="w-8 h-0.5 bg-[#F37130]" /> Let's Work Together
+              <span className="w-8 h-0.5 bg-[#F37130]" /> Let&apos;s Work Together
             </div>
             
             <h2 className="text-4xl lg:text-5xl font-black text-white leading-tight mb-8">

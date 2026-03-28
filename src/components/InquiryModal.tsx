@@ -53,9 +53,9 @@ export default function InquiryModal({ isOpen, onClose, productName }: InquiryMo
         onClose();
         setSubmitStatus('idle');
       }, 5000);
-    } catch (error: any) {
+    } catch (error: unknown) {
       setSubmitStatus('error');
-      setErrorMessage(error.message || 'An unexpected error occurred.');
+      setErrorMessage(error instanceof Error ? error.message : 'An unexpected error occurred.');
     } finally {
       setIsSubmitting(false);
     }
